@@ -10,7 +10,7 @@
 
 function disable_wp_heartbeat_init() {
     wp_deregister_script( 'autosave' );
-	wp_deregister_script( 'heartbeat' );
+    wp_deregister_script( 'heartbeat' );
     wp_register_script( 'heartbeat', plugin_dir_url(__FILE__)."dummy.js" );
 }
 add_action( 'init', 'disable_wp_heartbeat_init', 1 );
